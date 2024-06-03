@@ -198,6 +198,81 @@ class _MyHomePageState extends State<MyHomePage> {
   Set<Polygon> _polygons = {};
   void _createSquarePolygon() {
     // Coordenadas de los poligonos (tener en cuenta que para que se posicionen correctamente, es necesario iniciar los puntos desde la parte superior del polígono y seguir al contrario de las agujas del reloj)
+    List<LatLng> perimetro_total = [
+      LatLng(36.57736, -4.58295),
+      LatLng(36.57740, -4.58291),
+      LatLng(36.57744, -4.58290),
+      LatLng(36.57747, -4.58292),
+      LatLng(36.57750, -4.58295),
+      LatLng(36.57510, -4.58298),
+      LatLng(36.57751, -4.58303),
+      LatLng(36.57750, -4.58307),
+      LatLng(36.57748, -4.58310),
+      LatLng(36.57746, -4.58311),
+      LatLng(36.57745, -4.58312),
+      LatLng(36.57743, -4.58313),
+      LatLng(36.57739, -4.58314),
+      LatLng(36.57741, -4.58319),
+      LatLng(36.57695, -4.58335),
+      LatLng(36.57687, -4.58338),
+      LatLng(36.57685, -4.58334),
+      LatLng(36.57683, -4.58335),
+      LatLng(36.57682, -4.58330),
+      LatLng(36.57675, -4.58333),
+      LatLng(36.57676, -4.58338),
+      LatLng(36.57673, -4.58338),
+      LatLng(36.57674, -4.58343),
+      LatLng(36.57651, -4.58352),
+      LatLng(36.57652, -4.58358),
+      LatLng(36.57632, -4.58360),
+      LatLng(36.57634, -4.58372),
+      LatLng(36.57635, -4.58371),
+      LatLng(36.57638, -4.58383),
+      LatLng(36.57640, -4.58387),
+      LatLng(36.57642, -4.58393),
+      LatLng(36.57637, -4.58403),
+      LatLng(36.57629, -4.58410),
+      LatLng(36.57607, -4.58468),
+      LatLng(36.57604, -4.58466),
+      LatLng(36.57603, -4.58403),
+      LatLng(36.57604, -4.58384),
+      LatLng(36.57603, -4.58396),
+      LatLng(36.57593, -4.58393),
+      LatLng(36.57590, -4.58402),
+      LatLng(36.57573, -4.58394),
+      LatLng(36.57563, -4.58336),
+      LatLng(36.57577, -4.58262),
+      LatLng(36.57583, -4.58243),
+      LatLng(36.57591, -4.58231),
+      LatLng(36.57594, -4.58228),
+      LatLng(36.57595, -4.58225),
+      LatLng(36.57597, -4.58223),
+      LatLng(36.57599, -4.58217),
+      LatLng(36.57601, -4.58213),
+      LatLng(36.57602, -4.58211),
+      LatLng(36.57603, -4.58208),
+      LatLng(36.57604, -4.58205),
+      LatLng(36.57612, -4.58185),
+      LatLng(36.57620, -4.58161),
+      LatLng(36.57626, -4.58167),
+      LatLng(36.57628, -4.58176),
+      LatLng(36.57631, -4.58175),
+      LatLng(36.57633, -4.58177),
+      LatLng(36.57634, -4.58181),
+      LatLng(36.57636, -4.58184),
+      LatLng(36.57636, -4.58188),
+      LatLng(36.57646, -4.58207),
+      LatLng(36.57651, -4.58216),
+      LatLng(36.57655, -4.58226),
+      LatLng(36.57658, -4.58233),
+      LatLng(36.57663, -4.58246),
+      LatLng(36.57664, -4.58249),
+      LatLng(36.57667, -4.58252),
+      LatLng(36.57665, -4.58256),
+      LatLng(36.57692, -4.58290),
+      LatLng(36.57693, -4.58291),
+      LatLng(36.57732, -4.58276)
+    ];
     List<LatLng> parking = [
       LatLng(36.57728, -4.58280), //Esquina superior derecha
       LatLng(36.57736, -4.58318), //Esquina superior izquierda
@@ -401,83 +476,15 @@ class _MyHomePageState extends State<MyHomePage> {
       LatLng(36.57595, -4.58269), //Punto18
       LatLng(36.57610, -4.58289), //Punto19
     ];
-    List<LatLng> perimetro_total = [
-      LatLng(36.57736, -4.58295),
-      LatLng(36.57740, -4.58291),
-      LatLng(36.57744, -4.58290),
-      LatLng(36.57747, -4.58292),
-      LatLng(36.57750, -4.58295),
-      LatLng(36.57510, -4.58298),
-      LatLng(36.57751, -4.58303),
-      LatLng(36.57750, -4.58307),
-      LatLng(36.57748, -4.58310),
-      LatLng(36.57746, -4.58311),
-      LatLng(36.57745, -4.58312),
-      LatLng(36.57743, -4.58313),
-      LatLng(36.57739, -4.58314),
-      LatLng(36.57741, -4.58319),
-      LatLng(36.57695, -4.58335),
-      LatLng(36.57687, -4.58338),
-      LatLng(36.57685, -4.58334),
-      LatLng(36.57683, -4.58335),
-      LatLng(36.57682, -4.58330),
-      LatLng(36.57675, -4.58333),
-      LatLng(36.57676, -4.58338),
-      LatLng(36.57673, -4.58338),
-      LatLng(36.57674, -4.58343),
-      LatLng(36.57651, -4.58352),
-      LatLng(36.57652, -4.58358),
-      LatLng(36.57632, -4.58360),
-      LatLng(36.57634, -4.58372),
-      LatLng(36.57635, -4.58371),
-      LatLng(36.57638, -4.58383),
-      LatLng(36.57640, -4.58387),
-      LatLng(36.57642, -4.58393),
-      LatLng(36.57637, -4.58403),
-      LatLng(36.57629, -4.58410),
-      LatLng(36.57607, -4.58468),
-      LatLng(36.57604, -4.58466),
-      LatLng(36.57603, -4.58403),
-      LatLng(36.57604, -4.58384),
-      LatLng(36.57603, -4.58396),
-      LatLng(36.57593, -4.58393),
-      LatLng(36.57590, -4.58402),
-      LatLng(36.57573, -4.58394),
-      LatLng(36.57563, -4.58336),
-      LatLng(36.57577, -4.58262),
-      LatLng(36.57583, -4.58243),
-      LatLng(36.57591, -4.58231),
-      LatLng(36.57594, -4.58228),
-      LatLng(36.57595, -4.58225),
-      LatLng(36.57597, -4.58223),
-      LatLng(36.57599, -4.58217),
-      LatLng(36.57601, -4.58213),
-      LatLng(36.57602, -4.58211),
-      LatLng(36.57603, -4.58208),
-      LatLng(36.57604, -4.58205),
-      LatLng(36.57612, -4.58185),
-      LatLng(36.57620, -4.58161),
-      LatLng(36.57626, -4.58167),
-      LatLng(36.57628, -4.58176),
-      LatLng(36.57631, -4.58175),
-      LatLng(36.57633, -4.58177),
-      LatLng(36.57634, -4.58181),
-      LatLng(36.57636, -4.58184),
-      LatLng(36.57636, -4.58188),
-      LatLng(36.57646, -4.58207),
-      LatLng(36.57651, -4.58216),
-      LatLng(36.57655, -4.58226),
-      LatLng(36.57658, -4.58233),
-      LatLng(36.57663, -4.58246),
-      LatLng(36.57664, -4.58249),
-      LatLng(36.57667, -4.58252),
-      LatLng(36.57665, -4.58256),
-      LatLng(36.57692, -4.58290),
-      LatLng(36.57693, -4.58291),
-      LatLng(36.57732, -4.58276)
-    ];
 
     // Creación de los polígonos
+    Polygon PoligonoPerimetro_total = Polygon(
+      polygonId: PolygonId('perimetro_total'),
+      points: perimetro_total,
+      strokeWidth: 2,
+      strokeColor: Color.fromARGB(255, 158, 60, 3),
+      fillColor: Color.fromARGB(143, 253, 95, 3).withOpacity(1),
+    );
     Polygon PoligonoParking = Polygon(
       polygonId: PolygonId('parking'),
       points: parking,
@@ -639,16 +646,10 @@ class _MyHomePageState extends State<MyHomePage> {
       strokeColor: Color.fromARGB(255, 3, 140, 253),
       fillColor: Color.fromARGB(202, 3, 140, 253).withOpacity(1),
     );
-    Polygon PoligonoPerimetro_total = Polygon(
-      polygonId: PolygonId('perimetro_total'),
-      points: perimetro_total,
-      strokeWidth: 2,
-      strokeColor: Color.fromARGB(255, 158, 60, 3),
-      fillColor: Color.fromARGB(143, 253, 95, 3).withOpacity(1),
-    );
 
     // Añadir un polígono en concreto al conjunto de polígonos
     setState(() {
+      _polygons.add(PoligonoPerimetro_total);
       _polygons.add(PoligonoParking);
       _polygons.add(PoligonoShop);
       _polygons.add(PoligonoPeluqueria);
@@ -672,7 +673,6 @@ class _MyHomePageState extends State<MyHomePage> {
       _polygons.add(PoligonoLago);
       _polygons.add(PoligonoPajarera);
       _polygons.add(PoligonoPiscinaPrincipal);
-      _polygons.add(PoligonoPerimetro_total);
     });
   }
 
